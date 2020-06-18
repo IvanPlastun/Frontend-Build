@@ -1,0 +1,11 @@
+include ../_mixins-links.pug
+block variables
+
+doctype html
+html(lang=`${language}`)
+    head
+        include _head.pug
+    body
+        block content
+
+        include _foot.pug
