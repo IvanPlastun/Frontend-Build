@@ -1,5 +1,4 @@
 import { series, parallel } from "gulp"
-// import requireDir from "require-dir"
 
 // Tasks
 import clean from "./tasks/clean"
@@ -9,7 +8,6 @@ import processingScripts from "./tasks/scripts"
 import processingImages from "./tasks/image"
 import sprites from "./tasks/svgsprite"
 import fonts from "./tasks/fonts"
-// import favicons from "./tasks/favicons"
 import server from "./tasks/server"
 
 
@@ -51,18 +49,14 @@ const paths = {
     }
 }
 
-// requireDir("./tasks/")
-
 export { paths }
 
-const development = series(clean,
-    // parallel([sprites, fonts]),
+export const development = series(clean,
     parallel([processingPug, processingScripts, processingStyles, processingImages, sprites, fonts]),
-    // parallel([processingPug, processingStyles, processingScripts, sprites, fonts, processingImages]),
     parallel(server)
 )
 
-const buildProduction = series(clean,
+export const buildProduction = series(clean,
     series([processingPug, processingScripts, processingStyles, processingImages, sprites, fonts])
 )
 

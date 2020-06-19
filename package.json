@@ -5,7 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp buildProduction --production"
+    "build": "gulp buildProduction --production",
+    "build:html": "gulp pug2html --production",
+    "build:style": "gulp styles --production",
+    "build:image": "gulp image --production",
+    "build:svgsprite": "gulp svgsprite --production",
+    "build:script": "gulp scripts --production",
+    "build:fonts": "gulp fonts --production",
+    "lint:script": "eslint --color ./src/js/modules",
+    "lint:script --fix": "eslint --fix --color ./src/js/modules"
   },
   "keywords": ["gulp", "webpack", "build", "frontend"],
   "author": "Ivan Plastun",
