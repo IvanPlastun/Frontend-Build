@@ -45,7 +45,7 @@
     "imagemin-giflossy": "^5.1.10",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-zopfli": "^7.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "webpack": "^4.43.0",
     "webpack-stream": "^5.2.1",
     "yargs": "^15.3.1"
